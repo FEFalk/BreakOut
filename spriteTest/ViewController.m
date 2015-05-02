@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <SpriteKit/SpriteKit.h>
+#import "SpaceshipScene.h"
 
 @interface ViewController ()
 
@@ -14,8 +16,19 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    SpaceshipScene *scene1 = [[SpaceshipScene alloc] initWithSize:CGSizeMake(768,1024)];
+    SKView *spriteView = (SKView *) self.view;
+    [spriteView presentScene: scene1];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    SKView *spriteView = (SKView *) self.view;
+    spriteView.showsDrawCount = YES;
+    spriteView.showsNodeCount = YES;
+    spriteView.showsFPS = YES;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -23,5 +36,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end
