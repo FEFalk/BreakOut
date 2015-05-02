@@ -70,11 +70,13 @@ static const uint32_t paddleCategory = 0x1 << 3; // 0000000000000000000000000000
     // 3 Create the blocks and add them to the scene
     for (int i = 1; i <= numberOfBlocks; i++) {
         SKSpriteNode* block = [SKSpriteNode spriteNodeWithImageNamed:@"tileBlack_26"];
+        block.size = CGSizeMake(100, 15);
         block.position = CGPointMake((i-0.5f)*block.frame.size.width + (i-1)*padding + xOffset, self.frame.size.height * 0.8f);
-        block.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:block.frame.size];
+        block.physicsBody = [SKPhysicsBody bodyWithTexture:block.texture alphaThreshold:5.0 size:block.size];
         block.physicsBody.allowsRotation = NO;
         block.physicsBody.friction = 0.0f;
         block.name = blockCategoryName;
+        block.physicsBody.contactTestBitMask=ballCategory;
         block.physicsBody.categoryBitMask = blockCategory;
         [self addChild:block];
     }
@@ -107,7 +109,7 @@ static const uint32_t paddleCategory = 0x1 << 3; // 0000000000000000000000000000
         NSLog(@"Hit bottom. First contact has been made.");
     }
     if(firstBody.node.name == ballCategoryName && secondBody.node.name == blockCategoryName){
-        [firstBody.node removeFromParent];
+        [secondBody.node removeFromParent];
         //Check if game is won
     }
     NSLog(@"Hit ground.");
