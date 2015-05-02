@@ -12,6 +12,7 @@ static NSString* ballCategoryName = @"ball";
 static NSString* paddleCategoryName = @"paddle";
 static NSString* blockCategoryName = @"block";
 static NSString* blockNodeCategoryName = @"blockNode";
+static NSString* bottomCategoryName = @"bottom";
 
 static const uint32_t ballCategory  = 0x1 << 0;  // 00000000000000000000000000000001
 static const uint32_t bottomCategory = 0x1 << 1; // 00000000000000000000000000000010
@@ -60,10 +61,28 @@ static const uint32_t paddleCategory = 0x1 << 3; // 0000000000000000000000000000
     [self addChild:ball];
     [ball.physicsBody applyImpulse:CGVectorMake(6.0f, -50.0f)];
     
+    // 1 Store some useful variables
+    int numberOfBlocks = 4;
+    int blockWidth = [SKSpriteNode spriteNodeWithImageNamed:@"tileBlack_26.png"].size.width;
+    float padding = 20.0f;
+    // 2 Calculate the xOffset
+    float xOffset = (self.frame.size.width - (blockWidth * numberOfBlocks + padding * (numberOfBlocks-1))) / 2;
+    // 3 Create the blocks and add them to the scene
+    for (int i = 1; i <= numberOfBlocks; i++) {
+        SKSpriteNode* block = [SKSpriteNode spriteNodeWithImageNamed:@"tileBlack_26"];
+        block.position = CGPointMake((i-0.5f)*block.frame.size.width + (i-1)*padding + xOffset, self.frame.size.height * 0.8f);
+        block.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:block.frame.size];
+        block.physicsBody.allowsRotation = NO;
+        block.physicsBody.friction = 0.0f;
+        block.name = blockCategoryName;
+        block.physicsBody.categoryBitMask = blockCategory;
+        [self addChild:block];
+    }
+    
     SKNode *bottomRectCollider = [SKNode node];
     bottomRectCollider.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 1)];
     
-    bottomRectCollider.name=@"bottom";
+    bottomRectCollider.name=bottomCategoryName;
     bottomRectCollider.physicsBody.categoryBitMask=bottomCategory;
     bottomRectCollider.physicsBody.collisionBitMask=ballCategory;
     bottomRectCollider.physicsBody.contactTestBitMask=ballCategory;
@@ -83,16 +102,16 @@ static const uint32_t paddleCategory = 0x1 << 3; // 0000000000000000000000000000
         secondBody = contact.bodyB;
     }
     // 3 react to the contact between ball and bottom
-    if (firstBody.categoryBitMask == ballCategory && secondBody.categoryBitMask == bottomCategory) {
+    if (firstBody.node.name == ballCategoryName && secondBody.node.name == bottomCategoryName) {
         //TODO: Replace the log statement with display of Game Over Scene
         NSLog(@"Hit bottom. First contact has been made.");
     }
-    if(firstBody.categoryBitMask == ballCategory && secondBody.categoryBitMask == paddleCategory){
-        NSLog(@"Hit Paddle.");
+    if(firstBody.node.name == ballCategoryName && secondBody.node.name == blockCategoryName){
+        [firstBody.node removeFromParent];
+        //Check if game is won
     }
     NSLog(@"Hit ground.");
 }
-
 
 -(SKSpriteNode *)newPaddle
 {
@@ -119,7 +138,7 @@ static const uint32_t paddleCategory = 0x1 << 3; // 0000000000000000000000000000
     ball.size = CGSizeMake(60.0f, 60.0f);
     ball.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     ball.physicsBody.categoryBitMask=ballCategory;
-    ball.physicsBody.contactTestBitMask = bottomCategory;
+    ball.physicsBody.contactTestBitMask = bottomCategory | blockCategory;
     ball.physicsBody.collisionBitMask = bottomCategory;
     // 2
     ball.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:ball.frame.size.width/2];
