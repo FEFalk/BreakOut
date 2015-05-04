@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <SpriteKit/SpriteKit.h>
-#import "SpaceshipScene.h"
+#import "GameScene.h"
 
 @interface ViewController ()
 
@@ -18,7 +18,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    SpaceshipScene *scene1 = [[SpaceshipScene alloc] initWithSize:CGSizeMake(768,1024)];
+    GameScene *scene1 = [[GameScene alloc] initWithSize:CGSizeMake(768,1024)];
     SKView *spriteView = (SKView *) self.view;
     [spriteView presentScene: scene1];
 }

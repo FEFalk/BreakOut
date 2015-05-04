@@ -16,10 +16,13 @@
 		0F82D0FF1AF38104008FED57 /* spriteTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F82D0FE1AF38104008FED57 /* spriteTestTests.m */; };
 		0F82D1091AF3817D008FED57 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F82D1081AF3817D008FED57 /* SpriteKit.framework */; };
 		0F82D10C1AF39E78008FED57 /* HelloWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F82D10B1AF39E78008FED57 /* HelloWorld.m */; };
-		0F82D10F1AF3B6DE008FED57 /* SpaceshipScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F82D10E1AF3B6DE008FED57 /* SpaceshipScene.m */; };
+		0F82D10F1AF3B6DE008FED57 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F82D10E1AF3B6DE008FED57 /* GameScene.m */; };
 		0F82D1111AF3D47E008FED57 /* paddle_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F82D1101AF3D47E008FED57 /* paddle_06.png */; };
 		0F82D1141AF421FB008FED57 /* ballYellow_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F82D1121AF421FB008FED57 /* ballYellow_10.png */; };
 		0F82D1151AF421FB008FED57 /* tileBlack_26.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F82D1131AF421FB008FED57 /* tileBlack_26.png */; };
+		0FE040D31AF66B7700A92F56 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE040D21AF66B7700A92F56 /* GameOverScene.m */; };
+		0FE040D71AF66D5E00A92F56 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0FE040D61AF66D5E00A92F56 /* bg.jpg */; };
+		0FE040D91AF66E6400A92F56 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE040D81AF66E6400A92F56 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F82D0DF1AF38103008FED57 /* spriteTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spriteTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F82D0DF1AF38103008FED57 /* BreakOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F82D0E31AF38103008FED57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F82D0E41AF38103008FED57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0F82D0E61AF38103008FED57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,17 +46,21 @@
 		0F82D0ED1AF38103008FED57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F82D0EF1AF38103008FED57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0F82D0F21AF38103008FED57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		0F82D0F81AF38104008FED57 /* spriteTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spriteTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F82D0F81AF38104008FED57 /* BreakOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F82D0FD1AF38104008FED57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F82D0FE1AF38104008FED57 /* spriteTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = spriteTestTests.m; sourceTree = "<group>"; };
 		0F82D1081AF3817D008FED57 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		0F82D10A1AF39E78008FED57 /* HelloWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorld.h; sourceTree = "<group>"; };
 		0F82D10B1AF39E78008FED57 /* HelloWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloWorld.m; sourceTree = "<group>"; };
-		0F82D10D1AF3B6DE008FED57 /* SpaceshipScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceshipScene.h; sourceTree = "<group>"; };
-		0F82D10E1AF3B6DE008FED57 /* SpaceshipScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceshipScene.m; sourceTree = "<group>"; };
+		0F82D10D1AF3B6DE008FED57 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		0F82D10E1AF3B6DE008FED57 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		0F82D1101AF3D47E008FED57 /* paddle_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle_06.png; sourceTree = "<group>"; };
 		0F82D1121AF421FB008FED57 /* ballYellow_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ballYellow_10.png; sourceTree = "<group>"; };
 		0F82D1131AF421FB008FED57 /* tileBlack_26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileBlack_26.png; sourceTree = "<group>"; };
+		0FE040D11AF66B7700A92F56 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		0FE040D21AF66B7700A92F56 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
+		0FE040D61AF66D5E00A92F56 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		0FE040D81AF66E6400A92F56 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE040D91AF66E6400A92F56 /* CoreMotion.framework in Frameworks */,
 				0F82D1091AF3817D008FED57 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,12 +86,14 @@
 		0F82D0D61AF38103008FED57 = {
 			isa = PBXGroup;
 			children = (
+				0FE040D81AF66E6400A92F56 /* CoreMotion.framework */,
 				0F82D1121AF421FB008FED57 /* ballYellow_10.png */,
+				0FE040D61AF66D5E00A92F56 /* bg.jpg */,
 				0F82D1131AF421FB008FED57 /* tileBlack_26.png */,
 				0F82D1101AF3D47E008FED57 /* paddle_06.png */,
 				0F82D1081AF3817D008FED57 /* SpriteKit.framework */,
-				0F82D0E11AF38103008FED57 /* spriteTest */,
-				0F82D0FB1AF38104008FED57 /* spriteTestTests */,
+				0F82D0E11AF38103008FED57 /* BreakOut */,
+				0F82D0FB1AF38104008FED57 /* BreakOutTests */,
 				0F82D0E01AF38103008FED57 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,13 +101,13 @@
 		0F82D0E01AF38103008FED57 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F82D0DF1AF38103008FED57 /* spriteTest.app */,
-				0F82D0F81AF38104008FED57 /* spriteTestTests.xctest */,
+				0F82D0DF1AF38103008FED57 /* BreakOut.app */,
+				0F82D0F81AF38104008FED57 /* BreakOutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F82D0E11AF38103008FED57 /* spriteTest */ = {
+		0F82D0E11AF38103008FED57 /* BreakOut */ = {
 			isa = PBXGroup;
 			children = (
 				0F82D0E61AF38103008FED57 /* AppDelegate.h */,
@@ -106,13 +116,16 @@
 				0F82D0EA1AF38103008FED57 /* ViewController.m */,
 				0F82D10A1AF39E78008FED57 /* HelloWorld.h */,
 				0F82D10B1AF39E78008FED57 /* HelloWorld.m */,
-				0F82D10D1AF3B6DE008FED57 /* SpaceshipScene.h */,
-				0F82D10E1AF3B6DE008FED57 /* SpaceshipScene.m */,
+				0F82D10D1AF3B6DE008FED57 /* GameScene.h */,
+				0F82D10E1AF3B6DE008FED57 /* GameScene.m */,
+				0FE040D11AF66B7700A92F56 /* GameOverScene.h */,
+				0FE040D21AF66B7700A92F56 /* GameOverScene.m */,
 				0F82D0EC1AF38103008FED57 /* Main.storyboard */,
 				0F82D0EF1AF38103008FED57 /* Images.xcassets */,
 				0F82D0F11AF38103008FED57 /* LaunchScreen.xib */,
 				0F82D0E21AF38103008FED57 /* Supporting Files */,
 			);
+			name = BreakOut;
 			path = spriteTest;
 			sourceTree = "<group>";
 		};
@@ -125,12 +138,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0F82D0FB1AF38104008FED57 /* spriteTestTests */ = {
+		0F82D0FB1AF38104008FED57 /* BreakOutTests */ = {
 			isa = PBXGroup;
 			children = (
 				0F82D0FE1AF38104008FED57 /* spriteTestTests.m */,
 				0F82D0FC1AF38104008FED57 /* Supporting Files */,
 			);
+			name = BreakOutTests;
 			path = spriteTestTests;
 			sourceTree = "<group>";
 		};
@@ -145,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F82D0DE1AF38103008FED57 /* spriteTest */ = {
+		0F82D0DE1AF38103008FED57 /* BreakOut */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F82D1021AF38104008FED57 /* Build configuration list for PBXNativeTarget "spriteTest" */;
+			buildConfigurationList = 0F82D1021AF38104008FED57 /* Build configuration list for PBXNativeTarget "BreakOut" */;
 			buildPhases = (
 				0F82D0DB1AF38103008FED57 /* Sources */,
 				0F82D0DC1AF38103008FED57 /* Frameworks */,
@@ -157,14 +171,14 @@
 			);
 			dependencies = (
 			);
-			name = spriteTest;
+			name = BreakOut;
 			productName = spriteTest;
-			productReference = 0F82D0DF1AF38103008FED57 /* spriteTest.app */;
+			productReference = 0F82D0DF1AF38103008FED57 /* BreakOut.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0F82D0F71AF38104008FED57 /* spriteTestTests */ = {
+		0F82D0F71AF38104008FED57 /* BreakOutTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F82D1051AF38104008FED57 /* Build configuration list for PBXNativeTarget "spriteTestTests" */;
+			buildConfigurationList = 0F82D1051AF38104008FED57 /* Build configuration list for PBXNativeTarget "BreakOutTests" */;
 			buildPhases = (
 				0F82D0F41AF38104008FED57 /* Sources */,
 				0F82D0F51AF38104008FED57 /* Frameworks */,
@@ -175,9 +189,9 @@
 			dependencies = (
 				0F82D0FA1AF38104008FED57 /* PBXTargetDependency */,
 			);
-			name = spriteTestTests;
+			name = BreakOutTests;
 			productName = spriteTestTests;
-			productReference = 0F82D0F81AF38104008FED57 /* spriteTestTests.xctest */;
+			productReference = 0F82D0F81AF38104008FED57 /* BreakOutTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0F82D0DA1AF38103008FED57 /* Build configuration list for PBXProject "spriteTest" */;
+			buildConfigurationList = 0F82D0DA1AF38103008FED57 /* Build configuration list for PBXProject "BreakOut" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -212,8 +226,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F82D0DE1AF38103008FED57 /* spriteTest */,
-				0F82D0F71AF38104008FED57 /* spriteTestTests */,
+				0F82D0DE1AF38103008FED57 /* BreakOut */,
+				0F82D0F71AF38104008FED57 /* BreakOutTests */,
 			);
 		};
 /* End PBXProject section */
@@ -227,6 +241,7 @@
 				0F82D1151AF421FB008FED57 /* tileBlack_26.png in Resources */,
 				0F82D1111AF3D47E008FED57 /* paddle_06.png in Resources */,
 				0F82D0EE1AF38103008FED57 /* Main.storyboard in Resources */,
+				0FE040D71AF66D5E00A92F56 /* bg.jpg in Resources */,
 				0F82D0F31AF38103008FED57 /* LaunchScreen.xib in Resources */,
 				0F82D0F01AF38103008FED57 /* Images.xcassets in Resources */,
 			);
@@ -248,8 +263,9 @@
 			files = (
 				0F82D0EB1AF38103008FED57 /* ViewController.m in Sources */,
 				0F82D0E81AF38103008FED57 /* AppDelegate.m in Sources */,
-				0F82D10F1AF3B6DE008FED57 /* SpaceshipScene.m in Sources */,
+				0F82D10F1AF3B6DE008FED57 /* GameScene.m in Sources */,
 				0F82D0E51AF38103008FED57 /* main.m in Sources */,
+				0FE040D31AF66B7700A92F56 /* GameOverScene.m in Sources */,
 				0F82D10C1AF39E78008FED57 /* HelloWorld.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +283,7 @@
 /* Begin PBXTargetDependency section */
 		0F82D0FA1AF38104008FED57 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0F82D0DE1AF38103008FED57 /* spriteTest */;
+			target = 0F82D0DE1AF38103008FED57 /* BreakOut */;
 			targetProxy = 0F82D0F91AF38104008FED57 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -379,7 +395,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = spriteTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BreakOut;
 			};
 			name = Debug;
 		};
@@ -390,7 +406,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = spriteTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BreakOut;
 			};
 			name = Release;
 		};
@@ -408,7 +424,7 @@
 				);
 				INFOPLIST_FILE = spriteTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BreakOutTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spriteTest.app/spriteTest";
 			};
 			name = Debug;
@@ -423,7 +439,7 @@
 				);
 				INFOPLIST_FILE = spriteTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BreakOutTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spriteTest.app/spriteTest";
 			};
 			name = Release;
@@ -431,7 +447,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F82D0DA1AF38103008FED57 /* Build configuration list for PBXProject "spriteTest" */ = {
+		0F82D0DA1AF38103008FED57 /* Build configuration list for PBXProject "BreakOut" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F82D1001AF38104008FED57 /* Debug */,
@@ -440,21 +456,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F82D1021AF38104008FED57 /* Build configuration list for PBXNativeTarget "spriteTest" */ = {
+		0F82D1021AF38104008FED57 /* Build configuration list for PBXNativeTarget "BreakOut" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F82D1031AF38104008FED57 /* Debug */,
 				0F82D1041AF38104008FED57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		0F82D1051AF38104008FED57 /* Build configuration list for PBXNativeTarget "spriteTestTests" */ = {
+		0F82D1051AF38104008FED57 /* Build configuration list for PBXNativeTarget "BreakOutTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F82D1061AF38104008FED57 /* Debug */,
 				0F82D1071AF38104008FED57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

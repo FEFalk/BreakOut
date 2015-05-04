@@ -34,6 +34,20 @@
                ReferencedContainer = "container:spriteTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0F82D0DE1AF38103008FED57"
+               BuildableName = "BreakOut.app"
+               BlueprintName = "BreakOut"
+               ReferencedContainer = "container:BreakOut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -57,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F82D0DE1AF38103008FED57"
-            BuildableName = "spriteTest.app"
-            BlueprintName = "spriteTest"
-            ReferencedContainer = "container:spriteTest.xcodeproj">
+            BuildableName = "BreakOut.app"
+            BlueprintName = "BreakOut"
+            ReferencedContainer = "container:BreakOut.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +91,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F82D0DE1AF38103008FED57"
-            BuildableName = "spriteTest.app"
-            BlueprintName = "spriteTest"
-            ReferencedContainer = "container:spriteTest.xcodeproj">
+            BuildableName = "BreakOut.app"
+            BlueprintName = "BreakOut"
+            ReferencedContainer = "container:BreakOut.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

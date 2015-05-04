@@ -7,7 +7,11 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+@import CoreMotion;
 
-@interface SpaceshipScene : SKScene<SKPhysicsContactDelegate>
-
+@interface GameScene : SKScene<SKPhysicsContactDelegate>
+{
+    CMMotionManager *_manager;
+    NSTimer *timer;
+}
 @end

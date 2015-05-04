@@ -7,7 +7,7 @@
 //
 
 #import "HelloWorld.h"
-#import "SpaceshipScene.h"
+#import "GameScene.h"
 
 @interface HelloWorld ()
 @property BOOL contentCreated;
@@ -18,7 +18,7 @@
 
 - (void)didMoveToView: (SKView *) view
 {
-    [self.view presentScene:[[SpaceshipScene alloc] initWithSize:self.size]];
+    [self.view presentScene:[[GameScene alloc] initWithSize:self.size]];
 }
 
 - (void)createSceneContents
@@ -52,7 +52,7 @@
         SKAction *moveSequence = [SKAction sequence:@[moveUp, zoom, pause, fadeAway, remove]];
         
         [helloNode runAction: moveSequence completion:^{
-            SKScene *spaceshipScene  = [[SpaceshipScene alloc] initWithSize:self.size];
+            SKScene *spaceshipScene  = [[GameScene alloc] initWithSize:self.size];
             SKTransition *doors = [SKTransition doorsOpenVerticalWithDuration:0.5];
             [self.view presentScene:spaceshipScene transition:doors];
         }];
